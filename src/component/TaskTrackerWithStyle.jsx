@@ -1,4 +1,15 @@
 import { useState } from "react";
+import styled from "styled-components"
+
+const Container = styled.div`
+background-color: lightyellow;
+padding: 10px;
+border-radius: 5px;
+`;
+const Heading = styled.h2`
+color: darkgoldenrod;
+font-size: 24px;
+`;
 
 function TaskTrackerWithStyle() {
   const [tasks, setTasks] = useState([
@@ -61,8 +72,8 @@ function TaskTrackerWithStyle() {
   };
 
   return (
-    <div>
-      <h2>Task Tracker</h2>
+    <Container>
+      <Heading>Task Tracker</Heading>
       <input
         type="text"
         value={newTaskText}
@@ -104,7 +115,7 @@ function TaskTrackerWithStyle() {
           </li>
         ))}
       </ul>
-    </div>
+    </Container>
   );
 }
 
